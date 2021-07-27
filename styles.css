@@ -1,0 +1,219 @@
+body {
+    background-image : url('images/background.jpg');
+    background-attachment: fixed; 
+    max-width: 1336px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+header p{
+    text-align: center;
+}
+
+div#diaporama {
+    position : relative;
+    width: 60%;
+    margin: auto;
+    height: auto;
+}
+img#diapo {
+    width : 100%;
+    height: auto;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+#prev {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top:50%;
+}
+#next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    top: 50%;
+}
+div#main {
+    height:600px;
+    margin-top: 50px;
+}
+div#map {
+    width:70%;
+    float:left;
+    height:600px;
+}
+aside {
+    float:right;
+    width:29%;
+}
+
+aside #tab {
+    width:100%;
+
+}
+
+input {
+    width:98%;
+}
+
+#reserver {
+    text-align: center;
+    background-color: grey;
+    
+}
+
+.title {
+    text-align: center;
+    text-decoration: underline; 
+}
+
+/* slider */
+section#diaporama {
+    margin-top : 50px;
+    position : relative;
+}
+figure.slide{
+    text-align: center;
+    max-width: 1256 px;
+}
+figure.slide img {
+    max-width: 100%;
+}
+figcaption {
+    position: absolute;
+    top: 30%;
+    font-size: 2em;
+    left: 14%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+div#slider {
+    width : 100%;
+    margin :  auto ;
+    border: 1px dashed black;
+    height: 555px;
+
+}
+div#sliderTank {
+ display : none;
+}
+input.boutonSlider {
+    width : 37px;
+    height : 40px;
+    position : absolute;
+}
+input#flecheGauche {
+    top : 40%;
+    border-bottom-left-radius: 90px;
+    border-top-left-radius: 95px;
+    left: 2px;
+}
+input#flecheDroite {
+    top : 40%;
+    right: 0px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+input#start {
+    bottom : 0px;
+    right : 50%;
+    width : 60px;
+}
+input#stop {
+    bottom : 0px;
+    left : 50%;
+    width : 60px;
+}
+/* fin slider */
+
+/*      */
+div#trans {
+    position: absolute;
+    top: 1000px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0;
+    width: 400px;
+    visibility: hidden;
+}
+div#fBox {
+    background-image: url("images/background2.jpg");
+
+}
+div#canvasBox {
+    padding-top : 10px;
+}
+
+
+/* @media */
+
+@media screen and (max-width: 1000px) {
+    div#slider {
+        height: 395px;
+    }
+ }
+@media screen and (max-width: 800px) {
+    div#slider {
+        height: 305px;
+    }
+ }
+@media screen and (max-width: 600px) {
+    
+    input#start, input#stop {
+        bottom : -40px;
+    }
+    section#diaporama {
+        margin-top : 90px;
+    }
+    div#map {
+        width: 100%;
+        float: none;
+    }
+    input.boutonSlider {
+        z-index: 1;
+    }
+    figure.slide {
+        position: relative;
+        margin: 0;
+    }
+    figcaption {
+        top : -30%;
+        left: 0;
+        right: 0;
+    }
+    div#slider {
+        height: 235px;
+    }
+    aside {
+        float : none;
+        width : 80%;
+        text-align: center;
+        margin : auto;
+        padding : 30px 0px;
+    }
+    div#trans {
+        top : 1200px;
+    }
+    footer {
+        padding : 5px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 420px) {
+    div#slider {
+        height: 167px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    div#trans {
+       width : 320px;
+    }
+    div#slider {
+        height: 145px;
+    }
+}

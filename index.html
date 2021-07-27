@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="L'application vélo libre service de la ville de Lyon"/>
+        <meta property="og:image" content="images/img1.png"/> 
+        <meta property="og:title" content="Vélo'v Lyon"/>
+        <meta property="og:url" content="http://www.timothe-tornatore.fr/projet3/"/>
+        <meta property="og:site_name" content="Vélo'v Lyon"/>
+        <link rel="icon" href="images/velo.ico"/>
+        <title>Vélo'v</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    </head>
+    <body>
+        <header>
+                <h1>Bienvenue sur Vélo'v</h1>
+                <p> l'application web pour réserver son vélo en libre service sur Lyon</p>
+        </header>
+        <section id= "diaporama">
+            <input type="button" class="boutonSlider" id="flecheGauche" onclick="Diaporama.sens('prev'),Diaporama.stop()" value="<">
+            <input type="button" class="boutonSlider" id="flecheDroite" onclick="Diaporama.sens('next'),Diaporama.stop()" value=">">
+            <input type="button" class="boutonSlider" id="start" onclick="Diaporama.play()" value="start">
+            <input type="button" class="boutonSlider" id="stop" onclick="Diaporama.stop()" value="stop">
+            <div id="slider"></div>
+            <div id="sliderTank">
+                <figure class="slide">
+                    <img src="images/img1.png">
+                    <figcaption>Commencez par sélectionner une station</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="images/img2.png">
+                    <figcaption>Rentrez vos coordonnées</figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="images/img3.png">
+                    <figcaption>Votre vélo est réservé !</figcaption>
+                </figure>
+            </div>
+        </section>
+        <div id="main">
+
+            <div id="map">
+            </div>
+
+            <aside>
+                <div id="tab">
+                    <div class="ligne">
+                        <p class="title">Nom de la station</p>
+                        <p id ="nom" class="sujet"></p>
+                    </div>
+                    <div class="ligne">
+                            <p class="title">Adresse</p>
+                            <p id="adresse" class="sujet"></p>
+                    </div>
+                    <div class="ligne">
+                            <p class="title">Etat</p>
+                            <p id="etat" class="sujet"></p>
+                    </div>
+                    <div class="ligne">
+                            <p class="title">Nombre de vélos disponibles</p>
+                            <p id="nb_vélos" class="sujet"></p>
+                    </div>
+                    <div class="ligne">
+                            <p class="title" class="sujet">Réservation</p>
+                    </div>
+                    <form id="averif">
+                        <p>
+                            <p class="title" class="sujet">Nom</p>
+                            <input type="text" name="nom" class="textO" id="inputNom" autocomplete="off"/><br/>
+                            <p class="title" class="sujet">Prénom</p>
+                            <input type="text" name="prenom" class="textO" id="inputPrenom" autocomplete="off"/><br/>
+                            
+                            <button type="button" onclick="console.log('bouton signature clické');" id="reserver" disabled="disabled">Signature</button>
+                        </p>                      
+                    </form>
+                </div>  
+            </aside>
+        </div>
+        <div id="trans"></div>
+        <footer>  
+            <div id="cd"></div>   
+        </footer>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoVgxHV77LtbsDqkRoewTMUsG9XXEyB4M&callback=initMap"></script>
+            <script src="js/lib/markerclusterer.js"></script>
+            <script src="js/lib/ajax.js"></script>
+            <script src="js/sessionStorage.js"></script>
+            <script src="js/diaporama.js"></script>
+            <script src='js/gmap.js'></script> 
+            <script src="js/countDown.js"></script>  
+            <script src='js/create.js'></script>                    
+            <script src="js/canvas.js"></script>            
+    </body>
+</html>
